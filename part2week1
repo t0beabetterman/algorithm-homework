@@ -1,0 +1,20 @@
+public void DFS(Graph G,int v,boolean[] marked){
+        Deque<Integer> stack=new ArrayDeque<>();
+        stack.push(v);
+        marked[v]=true;
+        System.out.println(v);
+        boolean flag=false;
+        while(!stack.isEmpty()){
+        flag=false;
+        int cur=stack.peek();
+        for(int w:G.adj(v)){
+        if(!marked[w]){
+        marked[w]=true;
+        stack.push(w);
+        system.out.println(w);
+        flag=true;
+        }
+        }
+        if(!flag)  stack.pop();
+        }
+        }
